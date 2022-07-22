@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap';
 
 :root {
   --primary: #0f172a;
@@ -6,19 +6,24 @@
   --accent: #ef4444;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway, sans-serif;
 }
 
 .navigation-bar {
-  background-color: var(--primary);
   color: var(--secondary);
+
+  background-color: var(--primary);
 }
 
 .wrapper {
   width: 100%;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   padding: 2rem 1.5rem;
 }
 
@@ -30,8 +35,8 @@ body {
 
 .brand {
   font-size: 2.25rem;
-  line-height: 2.5rem;
   font-weight: 100;
+  line-height: 2.5rem;
   letter-spacing: 0.05rem;
 }
 
@@ -42,20 +47,22 @@ body {
 
 .menu-toggle:hover {
   cursor: pointer;
+
   color: var(--accent);
 }
 
 .burger {
-  height: 1.5rem;
   width: 1.5rem;
+  height: 1.5rem;
 }
 
 .menu {
   display: flex;
   flex-direction: column;
-  text-align: center;
+
   font-size: 1.25rem;
   line-height: 2rem;
+  text-align: center;
 }
 
 .menu-item {
@@ -70,27 +77,309 @@ body {
   display: none;
 }
 
+.hero {
+  background-color: var(--secondary);
+}
+
+.hero-left h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.hero-left p {
+  padding-top: 1rem;
+
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--primary);
+  letter-spacing: 0;
+}
+
+.sub {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  text-align: center;
+}
+
+.sub h6 {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.sub h3 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.sub p {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  align-items: center;
+  justify-content: center;
+
+  height: 48rem;
+
+  background-image: url('images/helpdesk.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.cta .cta-title {
+  font-size: 8rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-shadow: 1rem 0 1rem var(--primary);
+}
+
+.cta .cta-btn {
+  cursor: pointer;
+
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem 2rem;
+
+  font-size: 3rem;
+  color: var(--secondary);
+
+  background-color: var(--primary);
+  border-radius: 1rem;
+}
+
+.cta .cta-btn:hover {
+  font-weight: 700;
+}
+
+.cta-btn-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.services {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.services .card {
+  cursor: pointer;
+
+  flex: 1 0 auto;
+
+  margin: 2rem;
+  padding: 2rem;
+
+  text-align: center;
+
+  border: var(--primary) 0.025rem solid;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem var(--primary);
+
+  transition: box-shadow 100ms ease-in-out;
+}
+
+.services .card:hover {
+  box-shadow: 1rem 1rem var(--accent);
+}
+
+.services .card .card-title {
+  margin-bottom: 2rem;
+
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.services .card .card-content {
+  font-size: 1.5rem;
+}
+
+.pricing {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  background: linear-gradient(90deg, var(--primary) 35%, var(--secondary) 100%);
+}
+
+.pricing .price-table {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem;
+
+  color: var(--secondary);
+  text-align: center;
+
+  background-color: var(--accent);
+  border-radius: 1rem;
+}
+
+.pricing .price-table h3 {
+  font-size: 2rem;
+}
+
+.pricing .price-table p {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.pricing .price-table button {
+  cursor: pointer;
+
+  padding: 1rem 2rem;
+
+  text-transform: uppercase;
+
+  background-color: var(--primary);
+  border-radius: 1rem;
+}
+
+.pricing .price-table button:hover {
+  color: var(--accent);
+
+  background-color: var(--secondary);
+}
+
+.contact .contact-title {
+  font-size: 8rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-shadow: 1rem 0 1rem var(--primary);
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.contact form label {
+  font-weight: 700;
+}
+
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 0.5rem;
+
+  border: var(--primary) 0.025rem solid;
+  border-radius: 1rem;
+}
+
+.contact form .submit {
+  cursor: pointer;
+
+  padding: 1rem 2rem;
+
+  color: var(--secondary);
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: var(--primary);
+  border-radius: 1rem;
+}
+
+.float {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--secondary);
+
+  background-color: var(--accent);
+  border-radius: 100%;
+
+  transition: all 100ms ease-in-out;
+}
+
+.float:hover {
+  transform: scale(1.2);
+}
+
+.float-icon {
+  width: 3rem;
+}
+
 @media (min-width: 768px) {
   .wrapper {
-    width: 768px;
     display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     align-items: center;
     justify-content: space-between;
+
+    width: 768px;
   }
+
+  .hero-left {
+    flex-basis: 45%;
+  }
+
+  .hero-right {
+    flex-basis: 45%;
+  }
+
   .menu {
     flex-direction: row;
   }
+
   .menu-item {
     margin-top: 0;
     margin-left: 2rem;
   }
+
   .menu-toggle {
     display: none;
+  }
+  .pricing .price-table {
+    width: 45%;
   }
 }
 
 @media (min-width: 1280px) {
   .wrapper {
     width: 1280px;
+  }
+
+  .hero-left {
+    flex-basis: 60%;
+  }
+
+  .hero-right {
+    flex-basis: 35%;
+  }
+
+  .hero-left h1 {
+    font-size: 6rem;
+  }
+
+  .sub p {
+    max-width: 50%;
+  }
+
+  .services .card {
+    flex: 0 0 40%;
+  }
+  .pricing .price-table {
+    width: 30%;
   }
 }
